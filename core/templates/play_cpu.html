@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+{#<div style="color: white;">#}
+{#<p>공격자: {{ user.username }}</p>#}
+{#<form action="" method="POST">#}
+{#    {% csrf_token %}#}
+{#    <p>Defender: Computer</p>#}
+{#    <label for="atk_choice">Attacker choice</label>#}
+{#    <select name="atk_choice" id="atk_choice">#}
+{#        <option value="Scissors">가위</option>#}
+{#        <option value="Rock">바위</option>#}
+{#        <option value="Paper">보</option>#}
+{#    </select>#}
+{#    <input type="submit" value="전송">#}
+{#</form>#}
+{#</div>#}
+
+    <div class="container" style="margin-top: 15vh;">
+        <div class="card" style="margin: 0 auto; width: 50%; background-color: black; color: white;">
+          <h1 style="text-align: center;">Attacker: {{ user.username }}</h1>
+          <div class="card-body">
+              <p>Defender: Computer</p>
+            <form action="" method="POST">
+                {% csrf_token %}
+
+                  <div class="form-group">
+                    <label for="atk_choice">Attacker Choice</label>
+                      <select name="atk_choice" class="custom-select custom-select-lg mb-3" id="atk_choice">
+                          <option value="Scissors">가위</option>
+                          <option value="Rock">바위</option>
+                          <option value="Paper">보</option>
+                      </select>
+                  </div>
+                <br>
+                <div style='margin: 0 auto;'>
+                    <button type = "submit" class="btn btn-lg btn-outline-light">마 들어오라</button>
+                </div>
+
+            </form>
+          </div>
+        </div>
+    </div>
+
+
+{% endblock %}

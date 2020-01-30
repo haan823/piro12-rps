@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {#    <div style="color: white;">#}
+    {#        <p>Attacker: {{ game.atk_user }}</p>#}
+    {#        <p>Defender: {{ game.dfn_user }}</p>#}
+    {#        <p>Attacker's Choice: {{ game.atk_choice }}</p>#}
+    {#        <p>Defender's Choice: {{ game.dfs_choice }}</p>#}
+    {#        <p>Result: {{ game.result }}</p>#}
+    {#    </div>#}
+    <div class="container" style="text-align: center; margin-top: 15vh;">
+        <h1 style="color: white">결과</h1>
+        <br>
+        <div class="card" style="margin: 0 auto; width: 50%; background-color: black; color: white;">
+            <table class="table table-dark" style="background-color: black; font-size: 1.5rem;">
+                <tbody>
+                <tr>
+                    <td>Attacker: {{ game.atk_user }}</td>
+                </tr>
+                <tr>
+                    {% if game.dfn_user == None %}
+                        <td>Defender: Computer</td>
+                    {% else %}
+                        <td>Defender: {{ game.dfn_user }}</td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td>Attacker's Choice: {{ game.atk_choice }}</td>
+                </tr>
+                <tr>
+                    <td>Defender's Choice: {{ game.dfs_choice }}</td>
+                </tr>
+                <tr>
+                    <td>Result: {{ game.result }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

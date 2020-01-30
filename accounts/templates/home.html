@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container" style="color: white; text-align: center;">
+
+        <h1 style="margin-top: 33vh">전 세계 피로그래머와 가위바위보를 즐겨보세요
+{#            <!doctype html>#}
+{#            <html lang="en">#}
+{#            <head>#}
+{#                <meta charset="UTF-8">#}
+{#                <meta name="viewport"#}
+{#                      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">#}
+{#                <meta http-equiv="X-UA-Compatible" content="ie=edge">#}
+{#                <title>Document</title>#}
+{#            </head>#}
+{#            <body>#}
+{#            #}
+{#            </body>#}
+{#            </html>#}
+        </h1>
+        <br>
+        {% if user.is_active %}
+            <a href="{% url 'play-user' user.id %}" class="btn btn-lg btn-outline-light" role="button" style="">유저와 게임시작</a>
+            <br><br>
+            <a href="{% url 'play_cpu' user.id %}" class="btn btn-lg btn-outline-light" role="button" style="">컴퓨터와 게임시작</a>
+        {% else %}
+            로그인 해주세요
+        {% endif %}
+
+    </div>
+{% endblock %}

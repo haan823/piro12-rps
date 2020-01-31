@@ -8,6 +8,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <style>
+        *{font-family: 'Do Hyeon', sans-serif;}
+
+        footer {
+            padding-top: 10px;
+            color: white;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+
+            border-top: 1px solid white;
+            height: 80px;
+            width: 100%;
+            line-height: 30px;
+            text-align: center;
+            background: #525864;
+        }
+
+        #bt:hover{
+            letter-spacing: 5px;
+            transition: all ease 0.5s 0s;
+        }
+    </style>
 </head>
 <body style="background-color: black;">
 {% include 'header.html' %}
@@ -18,5 +42,6 @@
         {% endblock %}
     </div>
 </div>
+
 </body>
 </html>

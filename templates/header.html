@@ -9,7 +9,7 @@
     {% for game in games %}
         {% if game.dfn_user == user %}
             {% if game.result == '진행중' %}
-                <span style="color: white;">대결신청이 와 있습니다</span>
+                <i style='font-size: 20px; color: red;'class="fas fa-envelope-open-text"></i>
             {% endif %}
         {% endif %}
     {% endfor %}

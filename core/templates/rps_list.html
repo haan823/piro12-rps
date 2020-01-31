@@ -33,11 +33,11 @@
                                             {{ game.result }}
                                         {% endif %}
                                     {% elif game.dfn_user.id == user.id %}
-                                        <a href="{% url 'rps_compete' game.pk %}" class="btn btn-md btn-outline-light">대응하기</a>
+                                        <a href="{% url 'rps_compete' game.pk %}" id='bt' class="btn btn-md btn-outline-light">대응하기</a>
                                     {% endif %}
                                 {% endif %}
                             </td>
-                            <td><a href="{% url 'rps_detail' game.pk %}" class="btn btn-md btn-outline-light"
+                            <td><a href="{% url 'rps_detail' game.pk %}" id='bt' class="btn btn-md btn-outline-light"
                                    type="button">게임 결과</a></td>
                         </tr>
                     {% endif %}
